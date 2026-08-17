@@ -1,0 +1,24 @@
+{
+  "platillos": [
+    {
+      "id": "des-01",
+      "nombre": "Desayuno Típico Chapín",
+      "categoria": "Desayunos",
+      "precio": 35.00,
+      "descripcion": "Dos huevos al gusto, frijolitos volteados, plátanos fritos, queso fresco y tortillas calientes.",
+      "imagen": "/img/desayuno-tipico.jpg",
+      "alt": "Plato de desayuno típico guatemalteco con huevos, frijoles volteados, plátanos y queso",
+      "disponible": true
+    },
+    {
+      "id": "des-02",
+      "nombre": "Omelette La Placita",
+      "categoria": "Desayunos",
+      "precio": 30.00,
+      "descripcion": "Relleno de queso, champiñones y espinaca, acompañado de frijoles y pan tostado.",
+      "imagen": "/img/omelette.jpg",
+      "alt": "Omelette relleno de queso y vegetales con guarnición de frijoles",
+      "disponible": true
+    }
+  ]
+}
