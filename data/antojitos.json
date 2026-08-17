@@ -1,0 +1,14 @@
+{
+  "platillos": [
+    {
+      "id": "ant-01",
+      "nombre": "Plátanos con Crema y Azúcar",
+      "categoria": "Antojitos",
+      "precio": 18.00,
+      "descripcion": "Porción de plátanos fritos servidos con crema artesanal y azúcar.",
+      "imagen": "/img/platanos.jpg",
+      "alt": "Plato de plátanos maduros fritos bañados en crema blanca y azúcar",
+      "disponible": true
+    }
+  ]
+}
