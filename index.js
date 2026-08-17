@@ -24,7 +24,7 @@ const __dirname = path.dirname(__filename);
 const app = express();
 
 // Puerto donde va a funcionar el servidor (el 5000)
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 5001; // ---------------------------------- CAMBIO POR UN PUERTO NO TAN USADO
 
 // Ruta directa a la carpeta "data" donde Don Chente guarda los archivos de comida
 const DATA_DIR = path.join(__dirname, 'data');
@@ -59,7 +59,7 @@ const leerArchivoCategoria = async (nombreArchivo) => {
 // ====================================================================
 
 // 1. RUTA PARA OBTENER LOS BOTONES DE CATEGORÍAS
-// Dirección: http://localhost:5000/api/menu/categorias
+// Dirección: http://localhost:5001/api/menu/categorias
 app.get('/api/menu/categorias', async (req, res) => {
   try {
     // Revisa qué archivos existen dentro de la carpeta "data"

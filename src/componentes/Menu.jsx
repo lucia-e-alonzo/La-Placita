@@ -1,6 +1,9 @@
 // Traemos las herramientas de React para guardar datos en memoria (useState)
 // y para hacer cosas automáticas al cargar la página (useEffect)
 import { useState, useEffect } from 'react';
+import './Menu.css';
+
+const API_URL = `http://${window.location.hostname}:5001`; // 5001 porque es menos comun que 5000
 
 function Menu() {
   // 1. MEMORIA DEL COMPONENTE (ESTADOS)
@@ -24,7 +27,7 @@ function Menu() {
   // 2. PRIMERA TAREA: PEDIR LA LISTA DE CATEGORÍAS
   // Esto se ejecuta una sola vez cuando la página se abre por primera vez
   useEffect(() => {
-    fetch('http://localhost:5000/api/menu/categorias')
+    fetch(`${API_URL}/api/menu/categorias`) // MANDA A TRAER CUALQUIER HOST AUTOMATICAMENTE
       .then((respuesta) => {
         if (!respuesta.ok) {
           throw new Error('No se pudo obtener la lista de categorías.');
@@ -55,8 +58,8 @@ function Menu() {
     // Si es una específica, pedimos esa categoría (/api/menu/desayunos)
     const direccionServidor =
       categoriaActual.toLowerCase() === 'todos'
-        ? 'http://localhost:5000/api/menu'
-        : `http://localhost:5000/api/menu/${categoriaActual.toLowerCase()}`;
+        ? `${API_URL}/api/menu`
+        : `${API_URL}/api/menu/${categoriaActual.toLowerCase()}`;
 
     fetch(direccionServidor)
       .then((respuesta) => {

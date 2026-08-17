@@ -16,7 +16,7 @@
       "categoria": "Desayunos",
       "precio": 30.00,
       "descripcion": "Relleno de queso, champiñones y espinaca, acompañado de frijoles y pan tostado.",
-      "imagen": "/img/omelette.jpg",
+      "imagen": "/img/omelette.webp",
       "alt": "Omelette relleno de queso y vegetales con guarnición de frijoles",
       "disponible": true
     }

@@ -6,7 +6,7 @@
       "categoria": "Bebidas",
       "precio": 12.00,
       "descripcion": "Bebida refrescante a base de arroz, leche, canela y toque de vainilla (vaso de 16oz).",
-      "imagen": "/img/horchata.jpg",
+      "imagen": "/img/horchata.webp",
       "alt": "Vaso de horchata fría con hielo y canela en polvo",
       "disponible": true
     },
@@ -16,7 +16,7 @@
       "categoria": "Bebidas",
       "precio": 10.00,
       "descripcion": "Café recién pasado, servido negro o con leche.",
-      "imagen": "/img/cafe.jpg",
+      "imagen": "/img/cafe.webp",
       "alt": "Taza de barro humeante con café negro recién elaborado",
       "disponible": true
     }
