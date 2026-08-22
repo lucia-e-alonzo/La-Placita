@@ -1,0 +1,13 @@
+{
+  "nombre": "Comedor La Placita",
+  "slogan": "Aquí se come rico.",
+  "direccion": "Zona 1, Ciudad de Guatemala",
+  "telefono": "+502 2222-3333",
+  "email": "laplacita@correo.com",
+  "horario": "Lunes a Domingo, 7:00 AM – 8:00 PM",
+  "redesSociales": [
+    { "id": 1, "nombre": "Facebook", "url": "https://facebook.com/laplacita" },
+    { "id": 2, "nombre": "Instagram", "url": "https://instagram.com/laplacita" },
+    { "id": 3, "nombre": "WhatsApp", "url": "https://wa.me/50222223333" }
+  ]
+}
