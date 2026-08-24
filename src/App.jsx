@@ -1,6 +1,7 @@
 // src/App.jsx
 import Menuprincipal from "./componentes/Menu/Menuprincipal";
-import Footer from './componentes/Footer';
+import Footer from './componentes/Footer/Footer';
+import Correo from "./componentes/Correo/Correo";
 
 function App() {
   return (
@@ -8,9 +9,9 @@ function App() {
    
       <main>
         <Menuprincipal />
-       
+        <Correo />
+        <Footer />
       </main>
-      <Footer />
     </div>
   );
 }

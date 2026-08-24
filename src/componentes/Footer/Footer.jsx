@@ -3,7 +3,6 @@
 // Distribuye datos a sub-componentes Correo.
 
 import { useState, useEffect } from "react";
-import Correo from "./Correo/Correo";
 
 // URL base de la API backend
 const API_URL = "http://localhost:5001/api";
@@ -81,9 +80,6 @@ function Footer() {
           </ul>
         </nav>
       </div>
-
-      {/* Formulario de contacto */}
-      <Correo />
 
       {/* Copyright con año dinámico */}
       <div className="footer-barra-inferior">
