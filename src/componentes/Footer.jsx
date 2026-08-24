@@ -6,7 +6,7 @@ import { useState, useEffect } from "react";
 import Correo from "./Correo/Correo";
 
 // URL base de la API backend
-const API_URL = "http://localhost:5000/api";
+const API_URL = "http://localhost:5001/api";
 
 function Footer() {
   const [datos, setDatos] = useState(null);

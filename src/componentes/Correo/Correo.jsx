@@ -1,7 +1,7 @@
 import { useState } from "react";
 import FormularioCorreo from "./FormularioCorreo";
 
-const API_URL = "http://localhost:5000/api";
+const API_URL = "http://localhost:5001/api";
 
 function Correo() {
   const [enviando, setEnviando] = useState(false);
