@@ -1,10 +1,9 @@
+import './Header.css';
+
 function Header() {
   function irAInicio() {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth",
-    });
-  }
+    window.location.reload();
+    }
 
   function irAlMenu() {
     document.getElementById("menu")?.scrollIntoView({
@@ -20,22 +19,22 @@ function Header() {
 
   return (
     <header>
+      <nav>
+        <button onClick={irAInicio}>Inicio</button>
+        <button onClick={irAlMenu}>Menú</button>
+        <button onClick={irAlCorreo}>Contacto</button>
+      </nav>
+      
       <div className="header-banner">
         <img
-          src="/banner.jpg"
+          src="/img/banner.jpg"
           alt="Banner de Comedor La Placita"
         />
       </div>
 
       <div className="header-nombre">
-        <h1>Comedor La Placita</h1>
+        <h1>COMEDOR  "LA  PLACITA"</h1>
       </div>
-
-      <nav>
-        <button onClick={irAInicio}>Inicio</button>
-        <button onClick={irAlMenu}>Menú</button>
-        <button onClick={irAlCorreo}>Correo</button>
-      </nav>
     </header>
   );
 }

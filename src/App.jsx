@@ -1,4 +1,6 @@
 // src/App.jsx
+import "./App.css";
+import Header from "./componentes/Header";
 import Menuprincipal from "./componentes/Menu/Menuprincipal";
 import Footer from './componentes/Footer/Footer';
 import Correo from "./componentes/Correo/Correo";

@@ -1,4 +1,5 @@
 import datosFooter from "../../../data/footer.json";
+import "./Footer.css";
 
 function Footer() {
   const anioActual = new Date().getFullYear();
@@ -9,17 +10,11 @@ function Footer() {
       aria-label="Pie de página de La Placita"
     >
       <div className="footer-info">
-        <h2 className="footer-nombre">{datosFooter.nombre}</h2>
-
-        <p className="footer-slogan">
-          {datosFooter.slogan}
-        </p>
-
         <section
           className="footer-contacto"
           aria-labelledby="footer-contacto-titulo"
         >
-          <h3 id="footer-contacto-titulo">Contacto</h3>
+          <h3 id="footer-contacto-titulo">Dirección</h3>
 
           <address className="footer-direccion">
             <p>{datosFooter.direccion}</p>
@@ -51,9 +46,9 @@ function Footer() {
           <ul className="footer-redes-lista">
             {datosFooter.redesSociales.map((red) => (
               <li key={red.id}>
-                <span className="footer-red-social">
-                  {red.nombre}
-                </span>
+                <button type="button" className="footer-red-social">
+                    {red.nombre}
+                </button>
               </li>
             ))}
           </ul>

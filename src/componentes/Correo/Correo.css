@@ -1,0 +1,170 @@
+/* CORREO GENERAL */
+.correo-contenedor {
+  width: 100%;
+  max-width: 850px;
+  margin: 45px auto;
+  padding: 35px;
+
+  background-color: var(--color-tarjeta);
+
+  border: 1px solid var(--color-borde);
+  border-radius: 18px;
+  box-shadow:
+    0 8px 25px rgba(58, 48, 40, 0.08);
+}
+
+/* ======================= TITULO ===============' */
+.correo-contenedor h3 {
+  margin-top: 8px;
+  color: var(--color-cafe);
+
+  font-family: var(--fuente-titulos);
+  font-size: 2.5rem;
+  font-weight: 700;
+  font-style: italic;
+}
+
+/* ======================================= FORMULARIO ============= */
+.correo-contenedor form {
+  display: flex;
+  flex-direction: column;
+
+  gap: 15px;
+  margin-top: 25px;
+}
+/* Cada campo */
+.correo-contenedor form > div {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+/* ETIQUETAS */
+.correo-contenedor label {
+  color: var(--color-texto);
+  font-family: var(--fuente-texto);
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+/* INPUTS Y EL AREA DE TEXTO */
+.correo-contenedor input,
+.correo-contenedor textarea {
+  width: 100%;
+  padding: 13px 15px;
+  border: 1px solid var(--color-borde);
+  border-radius: 9px;
+
+  background-color: #FFFFFF;
+  color: var(--color-texto);
+
+  font-family: var(--fuente-texto);
+  font-size: 0.95rem;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+/* Placeholder */
+.correo-contenedor input::placeholder,
+.correo-contenedor textarea::placeholder {
+  color: #999;
+}
+
+/* Cuando seleccionamos un campo */
+.correo-contenedor input:focus,
+.correo-contenedor textarea:focus {
+  outline: none;
+  border-color: var(--color-principal);
+  box-shadow:
+    0 0 0 3px rgba(102, 149, 147, 0.15);
+}
+
+/* Textarea */
+.correo-contenedor textarea {
+  min-height: 150px;
+  resize: vertical;
+}
+
+/* ====================================== BOTON DE ENVIAR ================= */
+.correo-contenedor button[type="submit"] {
+  align-self: flex-start;
+
+  padding: 12px 30px;
+  border: none;
+  border-radius: 9px;
+
+  background-color: var(--color-principal);
+  color: white;
+
+  font-family: var(--fuente-texto);
+  font-size: 0.95rem;
+  font-weight: 600;
+
+  cursor: pointer;
+  transition:
+    background-color 0.2s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+.correo-contenedor button[type="submit"]:hover {
+  background-color: var(--color-principal-oscuro);
+  transform: translateY(-2px);
+  box-shadow:
+    0 5px 12px rgba(102, 149, 147, 0.25);
+}
+.correo-contenedor button[type="submit"]:active {
+  transform: translateY(0);
+}
+.correo-contenedor button[type="submit"]:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+
+/* ============================================= ERRORES ========================= */
+.correo-contenedor .error {
+  color: var(--color-acento);
+  font-size: 0.82rem;
+}
+/* Campo con error */
+.correo-contenedor input[aria-invalid="true"],
+.correo-contenedor textarea[aria-invalid="true"] {
+  border-color: var(--color-acento);
+}
+
+/* ====================================== MENSAJE DE ÉXITO ================================ */
+.correo-contenedor .exito {
+  padding: 12px 15px;
+  border-radius: 8px;
+  background-color: rgba(102, 149, 147, 0.15);
+  color: var(--color-principal-oscuro);
+  font-size: 0.9rem;
+}
+
+/* ================================ TELÉFONO =========================================== */
+
+@media (max-width: 600px) {
+  .correo-contenedor {
+    width: 100%;
+    margin: 30px auto;
+    padding: 25px 18px;
+    border-radius: 14px;
+  }
+  .correo-contenedor h3 {
+    font-size: 2.3rem;
+  }
+  .correo-contenedor form {
+    gap: 15px;
+    margin-top: 20px;
+  }
+  .correo-contenedor input,
+  .correo-contenedor textarea {
+    padding: 12px;
+  }
+  .correo-contenedor button[type="submit"] {
+    width: 100%;
+    padding: 13px;
+  }
+}
