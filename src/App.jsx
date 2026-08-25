@@ -6,10 +6,17 @@ import Correo from "./componentes/Correo/Correo";
 function App() {
   return (
     <div className="app-container">
-   
+        <Header />
+
       <main>
-        <Menuprincipal />
-        <Correo />
+        <section id="menu">
+          <Menuprincipal />
+        </section>
+
+        <section id="correo">
+          <Correo />
+        </section>
+
         <Footer />
       </main>
     </div>
