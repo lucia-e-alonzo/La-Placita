@@ -1,0 +1,22 @@
+{
+  "nombre": "Comedor La Placita",
+  "slogan": "Sabor casero que se siente como en casa.",
+  "direccion": "Ciudad de Guatemala, Zona 27, 2a calle 2-5, Local 1c",
+  "telefono": "3456 66899",
+  "email": "comedorlaplacitapreguntas@gmail.com",
+  "horario": "Lunes a viernes: 5:00 AM - 9:00 PM. Sábados: 8:00 AM - 3:00 PM.",
+  "redesSociales": [
+    {
+      "id": 1,
+      "nombre": "Instagram"
+    },
+    {
+      "id": 2,
+      "nombre": "YouTube"
+    },
+    {
+      "id": 3,
+      "nombre": "TikTok"
+    }
+  ]
+}
