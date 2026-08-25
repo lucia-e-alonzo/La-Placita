@@ -1,0 +1,224 @@
+/* ------------- MENU --------------- */
+.seccion-menu {
+  width: 100%;
+  padding: 15px 0;
+}
+
+/* ----------- CABECERA O TITULO DEL MENU ---------------- */
+.menu-cabecera {
+  text-align: center;
+  margin-bottom: 30px;
+  margin-top: 0px;
+}
+.menu-cabecera h2 {
+  margin-bottom: 10px;
+  color: var(--color-cafe);
+  font-size: 3rem;
+  font-style: italic;
+}
+.menu-cabecera p {
+  max-width: 700px;
+  margin: 0 auto;
+  color: var(--color-texto-suave);
+}
+
+/* ----------- FILTRO POR CATEGORIAS ------------------ */
+.menu-filtros {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+}
+/* Botones */
+.boton-categoria {
+  min-width: 120px;
+  padding: 12px 22px;
+  border: 1px solid var(--color-principal);
+  border-radius: 25px;
+  background-color: transparent;
+  color: var(--color-principal-oscuro);
+  font-family: var(--fuente-texto);
+  font-size: 0.95rem;
+  font-weight: 500;
+  cursor: pointer;
+  text-align: center;
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+/* hover de botones de categoria */
+.boton-categoria:hover {
+  transform: translateY(-2px);
+  background-color: rgba(102, 149, 147, 0.12);
+  box-shadow:
+    0 4px 10px rgba(0, 0, 0, 0.1);
+}
+/* Categoría seleccionada */
+.boton-categoria.activo {
+  background-color: var(--color-principal);
+  font-weight: 600;
+  color: white;
+  transform: translateY(-1px);
+  box-shadow:
+    0 4px 10px rgba(102, 149, 147, 0.25);
+}
+
+/* -------------- GRID DEL MENU -------------- */
+.menu-rejilla {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+  align-items: stretch;
+}
+
+/* ----------TARJETA INDIVIDUAL ------------------- */
+.tarjeta-platillo {
+  width: 100%;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  background-color: var(--color-tarjeta);
+  border: 1px solid var(--color-borde);
+  border-radius: 16px;
+  box-shadow:
+    0 5px 15px rgba(58, 48, 40, 0.07);
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+/* Efecto al pasar el mouse */
+.tarjeta-platillo:hover {
+  transform: translateY(-5px);
+  box-shadow:
+    0 12px 25px rgba(58, 48, 40, 0.12);
+}
+
+/* --------------- CONTENDOR DE IMAGEN ------------------- */
+.platillo-contenedor-img {
+  width: 100%;
+  height: 210px;
+  overflow: hidden;
+  background-color: #EAE4D8;
+  flex-shrink: 0;
+}
+
+/* ---------------- OMAGENES --------------------------- */
+.platillo-imagen {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.3s ease;
+}
+/*le agrega hover a la imagen que esta dentro de platillo*/
+.tarjeta-platillo:hover .platillo-imagen {
+  transform: scale(1.04);
+}
+
+
+/* ---------------------- INFO DEL PLATILLO -------------- */
+.platillo-detalles {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 18px;
+  gap: 10px;
+}
+
+/* ------------------- NOMBRE DEL PLATILLO Y PRECIO --------- */
+.platillo-encabezado {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 10px;
+}
+.platillo-titulo {
+  margin: 0;
+  color: var(--color-texto);
+  font-size: 1.4rem;
+}
+.platillo-precio {
+  flex-shrink: 0;
+  color: var(--color-cafe);
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+/* ---------- DESCRIPCION DEL PLATILLO ----------- */
+.platillo-descripcion {
+  color: var(--color-texto-suave);
+  line-height: 1.5;
+  overflow-wrap: break-word;
+}
+
+/* ----------- PLATILLO AGOTADO -------- */
+.platillo-agotado {
+  margin-top: auto;
+  color: var(--color-acento);
+  font-weight: 600;
+}
+
+/* ------------------------- ESTADOS DEL MENU ---------------- */
+
+.menu-estado {
+  width: 100%;
+  text-align: center;
+  margin: 20px 0;
+}
+.mensaje-cargando,
+.mensaje-error,
+.menu-vacio {
+  padding: 20px;
+}
+
+/* ---------------------------------- TABLET ------------------------------------- */
+@media (max-width: 900px) {
+  .menu-rejilla {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .platillo-contenedor-img {
+    height: 190px;
+  }
+}
+
+/* ----------------------------------------- TELEFONO ----------------------------- */
+
+@media (max-width: 600px) {
+  .seccion-menu {
+    padding: 20px 0;
+  }
+  .menu-cabecera h2 {
+    font-size: 2.3rem;
+  }
+  .menu-rejilla {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+  .menu-filtros {
+    gap: 8px;
+  }
+  .boton-categoria {
+    min-width: 105px;
+    padding: 10px 15px;
+    font-size: 0.9rem;
+  }
+  .platillo-contenedor-img {
+    height: 200px;
+  }
+  .platillo-detalles {
+    padding: 15px;
+  }
+  .platillo-encabezado {
+    flex-direction: column;
+    gap: 5px;
+  }
+
+}

@@ -1,0 +1,24 @@
+{
+  "platillos": [
+    {
+      "id": "alm-01",
+      "nombre": "Pepián Tradicional de Pollo",
+      "categoria": "Almuerzos",
+      "precio": 50.00,
+      "descripcion": "Receta tradicional con pollo en recado rojo, arroz blanco, verduras y tamalito.",
+      "imagen": "/img/pepian.webp",
+      "alt": "Plato hondo con pepián de pollo en salsa roja espesa acompañado de arroz y verduras",
+      "disponible": true
+    },
+    {
+      "id": "alm-02",
+      "nombre": "Hilachas de la Casa",
+      "categoria": "Almuerzos",
+      "precio": 42.00,
+      "descripcion": "Carne de res deshebrada en salsa de tomate y chile pasa, con papa y zanahoria.",
+      "imagen": "/img/hilachas.webp",
+      "alt": "Porción de hilachas de carne en salsa de tomate con papas",
+      "disponible": true
+    }
+  ]
+}

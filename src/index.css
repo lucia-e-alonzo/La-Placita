@@ -1,0 +1,81 @@
+/* =========================================================
+   ESTILOS GLOBALES
+   ========================================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Libre+Bodoni:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* variables de identidad visual */
+:root {
+  --color-fondo: #F7F3EA;
+  --color-principal: #669593;
+  --color-principal-oscuro: #4F7775;
+  --color-cafe: #8D6732;
+
+  --color-texto: #3A3028;
+  --color-texto-suave: #6B6259;
+
+  --color-tarjeta: #FFFDF8;
+  --color-borde: #DED6C8;
+
+  --color-acento: #B84A3A;
+  --color-dorado: #D6A84F;
+
+  --fuente-titulos: 'Libre Bodoni', serif;
+  --fuente-texto: 'Montserrat', sans-serif;
+}
+
+/* Reseteo básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Configuración general de la página */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-width: 320px;
+  font-family: var(--fuente-texto);
+  background-color: var(--color-fondo);
+  color: var(--color-texto);
+  overflow-x: hidden;
+}
+
+/* Evita que elementos se salgan horizontalmente */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* modifica los titulos */
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--fuente-titulos);
+  color: var(--color-texto);
+}
+
+h1,
+h2 {
+  font-weight: 700;
+}
+
+h3 {
+  font-weight: 600;
+}
+
+/* Evita scroll horizontal accidental */
+html,
+body {
+  overflow-x: hidden;
+}
+
+/* Elemento raíz de React */
+#root {
+  width: 100%;
+  min-height: 100vh;
+}

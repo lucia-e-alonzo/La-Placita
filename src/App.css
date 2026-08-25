@@ -1,0 +1,151 @@
+/* ---------- ESTRUCTURA GENERAL DE LA APLICACIÓN ------- */
+
+.app-container {
+  width: 100%;
+  min-height: 100vh;
+}
+
+main {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* ------- HEADER ------ */
+
+header {
+  width: 100%;
+}
+
+.header-banner {
+  width: 100%;
+  overflow: hidden;
+}
+
+.header-banner img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.header-nombre {
+  width: 100%;
+  text-align: center;
+}
+
+.header-nombre h1 {
+  margin: 20px 0;
+}
+
+
+/* =========================================================
+   NAVEGACIÓN DEL HEADER
+   ========================================================= */
+
+header nav {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+header nav button {
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+footer {
+  width: 100%;
+  margin-top: 40px;
+  padding: 30px 20px;
+}
+
+.footer-info {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-contacto-lista {
+  list-style: none;
+}
+
+.footer-redes {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.footer-barra-inferior {
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+}
+
+
+/* =========================================================
+   BOTONES
+   ========================================================= */
+
+button {
+  cursor: pointer;
+}
+
+button:disabled {
+  cursor: not-allowed;
+}
+
+/* =========================================================
+   RESPONSIVE - TABLET
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+  .menu-rejilla {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+}
+
+
+/* =========================================================
+   RESPONSIVE - TELÉFONO
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+  main {
+    padding: 15px;
+  }
+
+  .menu-rejilla {
+    grid-template-columns: 1fr;
+  }
+
+  .tarjeta-producto img {
+    height: 180px;
+  }
+
+  header nav {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  header nav button {
+    width: 100%;
+  }
+
+  .footer-redes {
+    flex-direction: column;
+    align-items: center;
+  }
+
+}
