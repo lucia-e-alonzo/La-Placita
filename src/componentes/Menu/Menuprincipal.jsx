@@ -1,4 +1,5 @@
 // src/components/Menu/Menu.jsx
+import './Menu.css';
 import { useState, useEffect } from 'react';
 import CategoriaFiltro from './CategoriaFiltro';
 import TarjetaProducto from './TarjetaProducto';

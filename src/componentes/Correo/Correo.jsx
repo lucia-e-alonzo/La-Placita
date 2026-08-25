@@ -1,5 +1,6 @@
 import { useState } from "react";
 import FormularioCorreo from "./FormularioCorreo";
+import './Correo.css';
 
 const API_URL = "http://localhost:5001/api";
 
@@ -43,7 +44,7 @@ function Correo() {
 
   return (
     <div className="correo-contenedor">
-      <h3>Reservas y consultas</h3>
+      <h3>Contáctanos</h3>
       <FormularioCorreo
         onEnvio={manejarEnvio}
         enviando={enviando}
