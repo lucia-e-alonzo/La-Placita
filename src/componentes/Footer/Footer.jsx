@@ -1,91 +1,68 @@
-// Footer.jsx
-// Componente principal del footer. Carga datos desde la API backend.
-// Distribuye datos a sub-componentes Correo.
-
-import { useState, useEffect } from "react";
-
-// URL base de la API backend
-const API_URL = "http://localhost:5001/api";
+import datosFooter from "../../../data/footer.json";
 
 function Footer() {
-  const [datos, setDatos] = useState(null);
-  const [cargando, setCargando] = useState(true);
-  const [error, setError] = useState(null);
-
-  // Carga los datos del footer desde el backend al montar el componente
-  useEffect(() => {
-    fetch(`${API_URL}/footer`)
-      .then((res) => {
-        if (!res.ok) throw new Error("Error al cargar el footer");
-        return res.json();
-      })
-      .then((data) => {
-        setDatos(data.datos);
-        setCargando(false);
-      })
-      .catch((err) => {
-        setError(err.message);
-        setCargando(false);
-      });
-  }, []);
-
-  if (cargando) {
-    return (
-      <footer aria-busy="true">
-        <p>Cargando información...</p>
-      </footer>
-    );
-  }
-
-  if (error) {
-    return (
-      <footer role="alert">
-        <p>No se pudo cargar el footer: {error}</p>
-      </footer>
-    );
-  }
+  const anioActual = new Date().getFullYear();
 
   return (
-    <footer aria-label="Pie de página de La Placita">
-      {/* Información del restaurante */}
+    <footer
+      className="footer"
+      aria-label="Pie de página de La Placita"
+    >
       <div className="footer-info">
-        <h2>{datos.nombre}</h2>
-        <p>{datos.slogan}</p>
+        <h2 className="footer-nombre">{datosFooter.nombre}</h2>
 
-        <ul>
-          <li>📍 {datos.direccion}</li>
-          <li>
-            <a href={`tel:${datos.telefono}`}>📞 {datos.telefono}</a>
-          </li>
-          <li>
-            <a href={`mailto:${datos.email}`}>✉️ {datos.email}</a>
-          </li>
-          <li>🕐 {datos.horario}</li>
-        </ul>
+        <p className="footer-slogan">
+          {datosFooter.slogan}
+        </p>
 
-        <nav>
-          <ul className="footer-redes">
-            {datos.redesSociales.map((red) => (
+        <section
+          className="footer-contacto"
+          aria-labelledby="footer-contacto-titulo"
+        >
+          <h3 id="footer-contacto-titulo">Contacto</h3>
+
+          <address className="footer-direccion">
+            <p>{datosFooter.direccion}</p>
+
+            <p>
+              <strong>Teléfono:</strong> {datosFooter.telefono}
+            </p>
+
+            <p>
+              <strong>Correo:</strong> {datosFooter.email}
+            </p>
+          </address>
+        </section>
+
+        <section
+          className="footer-horario"
+          aria-labelledby="footer-horario-titulo"
+        >
+          <h3 id="footer-horario-titulo">Horario</h3>
+          <p>{datosFooter.horario}</p>
+        </section>
+
+        <section
+          className="footer-redes"
+          aria-labelledby="footer-redes-titulo"
+        >
+          <h3 id="footer-redes-titulo">Redes sociales</h3>
+
+          <ul className="footer-redes-lista">
+            {datosFooter.redesSociales.map((red) => (
               <li key={red.id}>
-                <a
-                  href={red.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label={`Visitar ${red.nombre}`}
-                >
+                <span className="footer-red-social">
                   {red.nombre}
-                </a>
+                </span>
               </li>
             ))}
           </ul>
-        </nav>
+        </section>
       </div>
 
-      {/* Copyright con año dinámico */}
-      <div className="footer-barra-inferior">
+      <div className="footer-copyright">
         <p>
-          © {new Date().getFullYear()} {datos.nombre}. Todos los derechos
-          reservados.
+          © {anioActual} {datosFooter.nombre}. Todos los derechos reservados.
         </p>
       </div>
     </footer>
