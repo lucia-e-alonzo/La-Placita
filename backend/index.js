@@ -2,6 +2,7 @@
 // Servidor principal de Express.
 // Configura middleware de CORS y JSON, importa las rutas, y pone el servidor a escuchar.
 
+import "dotenv/config";
 import express from "express";
 import cors from "cors";
 import correoRoutes from "./correo.routes.js";
