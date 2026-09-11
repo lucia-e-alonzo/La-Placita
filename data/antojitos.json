@@ -9,6 +9,16 @@
       "imagen": "/img/platanos.jpg",
       "alt": "Plato de plátanos maduros fritos bañados en crema blanca y azúcar",
       "disponible": true
+    },
+    {
+      "id": "ant-02",
+      "nombre": "Atol de Elote",
+      "categoria": "Antojitos",
+      "precio": 20.00,
+      "descripcion": "Atol recién hecho con granitos de maíz.",
+      "imagen": "/img/atol-de-elote.jpg",
+      "alt": "Vaso de atol de elote decorado con granitos de maíz",
+      "disponible": true
     }
   ]
 }
