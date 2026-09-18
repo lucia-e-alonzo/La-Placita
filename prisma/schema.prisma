@@ -1,0 +1,24 @@
+﻿generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider  = "postgresql"
+  url       = env("DATABASE_URL")
+  directUrl = env("DIRECT_URL")
+}
+
+model Platillo {
+  id          String   @id
+  nombre      String
+  categoria   String
+  precio      Decimal  @db.Decimal(10, 2)
+  descripcion String?
+  imagen      String?
+  alt         String?
+  disponible  Boolean  @default(true)
+  createdAt   DateTime @default(now()) @map("created_at")
+  updatedAt   DateTime @updatedAt @map("updated_at")
+
+  @@map("platillos")
+}
